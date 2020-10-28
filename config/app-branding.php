@@ -6,5 +6,11 @@
  *  (if that file is not there, make it, or run 'php artisan
  */
 return [
-    // 'BeAwesome'=>true
+    'AppName' => 'App Name',
+
+    'CompanyNameShort' => 'Overlord',
+    'CompanyNameLong' => 'Overlord Enterprises, LLC',
+    'CompanyTagline' => 'A double top-line endeavour.',
+
+    'Trademark' => 'Trademarks, posts, descriptions, comments, etc., are owned by their respective posters.',
 ];

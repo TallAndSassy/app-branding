@@ -1,14 +1,14 @@
 <?php
 
-namespace Spatie\Skeleton\Models;
+namespace TallAndSassy\AppBranding\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
-class SkeletonModel extends Model
+class AppBrandingModel extends Model
 {
     public $gaurded = [];// Defualt to no mass assignements
     public $fillable = ['name'];
-    public $table = 'skeleton';
+    public $table = 'app-branding';
 
     public function getUpperCasedName() : string
     {

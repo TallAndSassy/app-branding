@@ -1,11 +1,11 @@
 {
-    "name": "spatie/skeleton",
-    "description": "package_description",
+    "name": "tallandsassy/app-branding",
+    "description": "Mechanism to do some default branding for your TAS app.",
     "keywords": [
-        "vendor_name",
-        "package_name"
+        "tallandsassy",
+        "app-branding"
     ],
-    "homepage": "https://github.com/vendor_name/package_name",
+    "homepage": "https://github.com/tallandsassy/app-branding",
     "license": "MIT",
     "authors": [
         {
@@ -28,13 +28,13 @@
     },
     "autoload": {
         "psr-4": {
-            "Spatie\\Skeleton\\": "src",
-            "Spatie\\Skeleton\\Database\\Factories\\": "database/factories"
+            "TallAndSassy\\AppBranding\\": "src",
+            "TallAndSassy\\AppBranding\\Database\\Factories\\": "database/factories"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Spatie\\Skeleton\\Tests\\": "tests"
+            "TallAndSassy\\AppBranding\\Tests\\": "tests"
         }
     },
     "scripts": {
@@ -49,10 +49,10 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Spatie\\Skeleton\\SkeletonServiceProvider"
+                "TallAndSassy\\AppBranding\\AppBrandingServiceProvider"
             ],
             "aliases": {
-                "Skeleton": "Spatie\\Skeleton\\SkeletonFacade"
+                "AppBranding": "TallAndSassy\\AppBranding\\AppBrandingFacade"
             }
         }
     },

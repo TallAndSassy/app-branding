@@ -30,7 +30,7 @@ class AppBrandingServiceProvider extends ServiceProvider
             );
 
             $migrationFileName = 'create_app_branding_table.php';
-            if (!$this->migrationFileExists($migrationFileName)) {
+            if (! $this->migrationFileExists($migrationFileName)) {
                 $this->publishes(
                     [
                         __DIR__ . "/../database/migrations/{$migrationFileName}.stub" => database_path(
@@ -147,7 +147,7 @@ class AppBrandingServiceProvider extends ServiceProvider
                 'resources/views/grok',
                 'tassy'
             );//tassy gets macro'd out
-            Route::get('/grok/TallAndSassy/AppBranding', fn() => view('tassy::grok/index'));
+            Route::get('/grok/TallAndSassy/AppBranding', fn () => view('tassy::grok/index'));
         }
 
         // TODO: Register your livewire components that live in this package here:

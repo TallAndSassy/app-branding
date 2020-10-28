@@ -30,7 +30,7 @@ class AppBrandingServiceProvider extends ServiceProvider
             );
 
             $migrationFileName = 'create_app_branding_table.php';
-            if (! $this->migrationFileExists($migrationFileName)) {
+            if (!$this->migrationFileExists($migrationFileName)) {
                 $this->publishes(
                     [
                         __DIR__ . "/../database/migrations/{$migrationFileName}.stub" => database_path(
@@ -41,9 +41,12 @@ class AppBrandingServiceProvider extends ServiceProvider
                 );
             }
 
-             $this->publishes([
-                 __DIR__.'/../resources/public' => public_path('tallandsassy/app-branding'),
-                ], ['public']);
+            $this->publishes(
+                [
+                    __DIR__ . '/../resources/public' => public_path('tallandsassy/app-branding'),
+                ],
+                ['public']
+            );
 
             // Publishing assets.
             /*$this->publishes([
@@ -54,7 +57,6 @@ class AppBrandingServiceProvider extends ServiceProvider
             /*$this->publishes([
                 __DIR__.'/../resources/lang' => resource_path('lang/tallandsassy/app-branding'),
             ], 'tallandsassy.app-branding');*/
-
 
 
             // Registering package commands.
@@ -78,7 +80,8 @@ class AppBrandingServiceProvider extends ServiceProvider
                         if (App::environment(['local', 'testing'])) {
                             // prefixed url to string
                             Route::get(
-                                '/TallAndSassy/AppBranding/sample_string', // you will absolutely need a prefix in your url
+                                '/TallAndSassy/AppBranding/sample_string',
+                                // you will absolutely need a prefix in your url
                                 function () {
                                     return "Hello AppBranding string via blade prefix";
                                 }
@@ -137,8 +140,14 @@ class AppBrandingServiceProvider extends ServiceProvider
 
         // GROK
         if (App::environment(['local', 'testing'])) {
-            \ElegantTechnologies\Grok\GrokWrangler::grokMe(static::class, 'TallAndSassy', 'app-branding', 'resources/views/grok', 'tassy');//tassy gets macro'd out
-            Route::get('/grok/TallAndSassy/AppBranding', fn () => view('tassy::grok/index'));
+            \ElegantTechnologies\Grok\GrokWrangler::grokMe(
+                static::class,
+                'TallAndSassy',
+                'app-branding',
+                'resources/views/grok',
+                'tassy'
+            );//tassy gets macro'd out
+            Route::get('/grok/TallAndSassy/AppBranding', fn() => view('tassy::grok/index'));
         }
 
         // TODO: Register your livewire components that live in this package here:

@@ -6,7 +6,8 @@
  *  (if that file is not there, make it, or run 'php artisan
  */
 return [
-    'AppName' => 'App Name',
+    'AppName' => 'Tall and Sassy',
+    'AppTagline' => 'A Laravel SaaS Accelerator',
 
     'CompanyNameShort' => 'Overlord',
     'CompanyNameLong' => 'Overlord Enterprises, LLC',

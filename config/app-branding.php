@@ -14,4 +14,6 @@ return [
     'CompanyTagline' => 'A double top-line endeavour.',
 
     'Trademark' => 'Trademarks, posts, descriptions, comments, etc., are owned by their respective posters.',
+    
+    'PrettyVersion' => '1.0'
 ];
